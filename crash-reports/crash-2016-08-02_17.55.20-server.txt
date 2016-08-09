@@ -1,0 +1,205 @@
+---- Minecraft Crash Report ----
+// Uh... Did I do that?
+
+Time: 02/08/16 17:55
+Description: Watching Server
+
+java.lang.Error
+	at cm.a(SourceFile:163)
+	at cm.a(SourceFile:155)
+	at aly.d(SourceFile:288)
+	at aly.b(SourceFile:206)
+	at ls.a(SourceFile:645)
+	at ls.d(SourceFile:216)
+	at net.minecraft.server.MinecraftServer.D(SourceFile:618)
+	at ld.D(SourceFile:338)
+	at net.minecraft.server.MinecraftServer.C(SourceFile:554)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:458)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server Watchdog
+Stacktrace:
+	at cm.a(SourceFile:163)
+	at cm.a(SourceFile:155)
+	at aly.d(SourceFile:288)
+	at aly.b(SourceFile:206)
+	at ls.a(SourceFile:645)
+	at ls.d(SourceFile:216)
+	at net.minecraft.server.MinecraftServer.D(SourceFile:618)
+	at ld.D(SourceFile:338)
+	at net.minecraft.server.MinecraftServer.C(SourceFile:554)
+
+-- Thread Dump --
+Details:
+	Threads: "Netty Server IO #5" Id=22 RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@18e24c
+	-  locked java.util.Collections$UnmodifiableSet@df17bf
+	-  locked sun.nio.ch.EPollSelectorImpl@e0893c
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"Netty Server IO #4" Id=21 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@1e21d84
+	-  locked java.util.Collections$UnmodifiableSet@738736
+	-  locked sun.nio.ch.EPollSelectorImpl@3b0b68
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"File IO Thread" Id=27 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at bbu.c(SourceFile:51)
+	at bbu.run(SourceFile:30)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+"Netty Server IO #3" Id=20 RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@40cf7a
+	-  locked java.util.Collections$UnmodifiableSet@1cde2cb
+	-  locked sun.nio.ch.EPollSelectorImpl@11391b3
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"Netty Server IO #2" Id=19 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@189a672
+	-  locked java.util.Collections$UnmodifiableSet@14481a6
+	-  locked sun.nio.ch.EPollSelectorImpl@183fdbf
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"Server Watchdog" Id=26 RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:446)
+	at le.run(SourceFile:43)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+"Netty Server IO #1" Id=18 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@6674f5
+	-  locked java.util.Collections$UnmodifiableSet@8ce93d
+	-  locked sun.nio.ch.EPollSelectorImpl@10a0abb
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"Netty Server IO #0" Id=17 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@18c6360
+	-  locked java.util.Collections$UnmodifiableSet@f26138
+	-  locked sun.nio.ch.EPollSelectorImpl@18cad9a
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"DestroyJavaVM" Id=14 RUNNABLE
+
+
+"Server thread" Id=11 RUNNABLE
+	at cm.a(SourceFile:163)
+	at cm.a(SourceFile:155)
+	at aly.d(SourceFile:288)
+	at aly.b(SourceFile:206)
+	at ls.a(SourceFile:645)
+	at ls.d(SourceFile:216)
+	at net.minecraft.server.MinecraftServer.D(SourceFile:618)
+	at ld.D(SourceFile:338)
+	...
+
+
+"Server Infinisleeper" Id=10 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at ld$1.run(SourceFile:79)
+
+
+"Snooper Timer" Id=9 TIMED_WAITING on java.util.TaskQueue@903f02
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@903f02
+	at java.util.TimerThread.mainLoop(Timer.java:552)
+	at java.util.TimerThread.run(Timer.java:505)
+
+
+"Signal Dispatcher" Id=4 RUNNABLE
+
+
+"Finalizer" Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@9fdc93
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@9fdc93
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+
+"Reference Handler" Id=2 WAITING on java.lang.ref.Reference$Lock@1b38299
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.Reference$Lock@1b38299
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:157)
+
+
+
+Stacktrace:
+	at le.run(SourceFile:59)
+	at java.lang.Thread.run(Thread.java:745)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.10.2
+	Operating System: Linux (arm) version 4.4.13-v7+
+	Java Version: 1.8.0_65, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) Client VM (mixed mode), Oracle Corporation
+	Memory: 3233648 bytes (3 MB) / 235274240 bytes (224 MB) up to 235274240 bytes (224 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	Profiler Position: N/A (disabled)
+	Player Count: 3 / 20; [lu['Smoothie'/362, l='world', x=-666.89, y=66.88, z=561.58], lu['NischayPro'/609, l='world', x=-81.48, y=61.00, z=66.49], lu['TOS'/905, l='world', x=-659.47, y=65.00, z=560.30]]
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)

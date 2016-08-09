@@ -1,0 +1,187 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 30/07/16 13:27
+Description: Watching Server
+
+java.lang.Error
+	at java.lang.Class.isAssignableFrom(Native Method)
+	at ob.b(SourceFile:44)
+	at ob$1.iterator(SourceFile:101)
+	at asv.a(SourceFile:738)
+	at aid.a(SourceFile:2322)
+	at tg.a(SourceFile:52)
+	at tr.a(SourceFile:94)
+	at sg.cr(SourceFile:645)
+	at sf.n(SourceFile:1792)
+	at sg.n(SourceFile:498)
+	at yx.n(SourceFile:47)
+	at zd.n(SourceFile:184)
+	at sf.m(SourceFile:1654)
+	at sg.m(SourceFile:277)
+	at yx.m(SourceFile:52)
+	at aid.a(SourceFile:1527)
+	at ls.a(SourceFile:718)
+	at aid.g(SourceFile:1505)
+	at aid.k(SourceFile:1388)
+	at ls.k(SourceFile:551)
+	at net.minecraft.server.MinecraftServer.D(SourceFile:626)
+	at ld.D(SourceFile:338)
+	at net.minecraft.server.MinecraftServer.C(SourceFile:554)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:458)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server Watchdog
+Stacktrace:
+	at java.lang.Class.isAssignableFrom(Native Method)
+	at ob.b(SourceFile:44)
+	at ob$1.iterator(SourceFile:101)
+	at asv.a(SourceFile:738)
+	at aid.a(SourceFile:2322)
+	at tg.a(SourceFile:52)
+	at tr.a(SourceFile:94)
+	at sg.cr(SourceFile:645)
+	at sf.n(SourceFile:1792)
+	at sg.n(SourceFile:498)
+	at yx.n(SourceFile:47)
+	at zd.n(SourceFile:184)
+	at sf.m(SourceFile:1654)
+	at sg.m(SourceFile:277)
+	at yx.m(SourceFile:52)
+	at aid.a(SourceFile:1527)
+	at ls.a(SourceFile:718)
+	at aid.g(SourceFile:1505)
+	at aid.k(SourceFile:1388)
+	at ls.k(SourceFile:551)
+	at net.minecraft.server.MinecraftServer.D(SourceFile:626)
+	at ld.D(SourceFile:338)
+	at net.minecraft.server.MinecraftServer.C(SourceFile:554)
+
+-- Thread Dump --
+Details:
+	Threads: "File IO Thread" Id=27 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at bbu.c(SourceFile:51)
+	at bbu.run(SourceFile:30)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+"Netty Server IO #1" Id=18 RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@c913db
+	-  locked java.util.Collections$UnmodifiableSet@efbb2
+	-  locked sun.nio.ch.EPollSelectorImpl@3178ab
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"Server Watchdog" Id=26 RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:446)
+	at le.run(SourceFile:43)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+"Netty Server IO #0" Id=17 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@133f189
+	-  locked java.util.Collections$UnmodifiableSet@19c627f
+	-  locked sun.nio.ch.EPollSelectorImpl@6ca55
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"DestroyJavaVM" Id=14 RUNNABLE
+
+
+"Server console handler" Id=13 RUNNABLE (in native)
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	-  locked java.io.BufferedInputStream@143071e
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	-  locked java.io.InputStreamReader@11c0ec6
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	...
+
+
+"Server thread" Id=11 RUNNABLE
+	at java.lang.Class.isAssignableFrom(Native Method)
+	at ob.b(SourceFile:44)
+	at ob$1.iterator(SourceFile:101)
+	at asv.a(SourceFile:738)
+	at aid.a(SourceFile:2322)
+	at tg.a(SourceFile:52)
+	at tr.a(SourceFile:94)
+	at sg.cr(SourceFile:645)
+	...
+
+
+"Server Infinisleeper" Id=10 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at ld$1.run(SourceFile:79)
+
+
+"Snooper Timer" Id=9 TIMED_WAITING on java.util.TaskQueue@1f708c0
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@1f708c0
+	at java.util.TimerThread.mainLoop(Timer.java:552)
+	at java.util.TimerThread.run(Timer.java:505)
+
+
+"Signal Dispatcher" Id=4 RUNNABLE
+
+
+"Finalizer" Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@15b2189
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@15b2189
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+
+"Reference Handler" Id=2 WAITING on java.lang.ref.Reference$Lock@47ad0b
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.Reference$Lock@47ad0b
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:157)
+
+
+
+Stacktrace:
+	at le.run(SourceFile:59)
+	at java.lang.Thread.run(Thread.java:745)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.10.2
+	Operating System: Linux (arm) version 4.4.13-v7+
+	Java Version: 1.8.0_65, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) Client VM (mixed mode), Oracle Corporation
+	Memory: 559034592 bytes (533 MB) / 810942464 bytes (773 MB) up to 810942464 bytes (773 MB)
+	JVM Flags: 1 total; -Xms800m
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 20; [lu['NischayPro'/412, l='world', x=-674.93, y=75.00, z=569.79]]
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)

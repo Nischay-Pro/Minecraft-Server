@@ -1,0 +1,159 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 02/08/16 03:58
+Description: Watching Server
+
+java.lang.Error
+	at java.lang.System.identityHashCode(Native Method)
+	at java.util.IdentityHashMap.hash(IdentityHashMap.java:294)
+	at java.util.IdentityHashMap.get(IdentityHashMap.java:328)
+	at cw.a(SourceFile:40)
+	at aso.a(SourceFile:108)
+	at atj.a(SourceFile:221)
+	at atj.a(SourceFile:104)
+	at lr.c(SourceFile:147)
+	at lr.a(SourceFile:166)
+	at ls.a(SourceFile:884)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:372)
+	at net.minecraft.server.MinecraftServer.C(SourceFile:572)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:458)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server Watchdog
+Stacktrace:
+	at java.lang.System.identityHashCode(Native Method)
+	at java.util.IdentityHashMap.hash(IdentityHashMap.java:294)
+	at java.util.IdentityHashMap.get(IdentityHashMap.java:328)
+	at cw.a(SourceFile:40)
+	at aso.a(SourceFile:108)
+	at atj.a(SourceFile:221)
+	at atj.a(SourceFile:104)
+	at lr.c(SourceFile:147)
+	at lr.a(SourceFile:166)
+	at ls.a(SourceFile:884)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:372)
+	at net.minecraft.server.MinecraftServer.C(SourceFile:572)
+
+-- Thread Dump --
+Details:
+	Threads: "File IO Thread" Id=27 RUNNABLE
+	at java.util.zip.Deflater.deflateBytes(Native Method)
+	at java.util.zip.Deflater.deflate(Deflater.java:442)
+	-  locked java.util.zip.ZStreamRef@47fbd
+	at java.util.zip.Deflater.deflate(Deflater.java:364)
+	at java.util.zip.DeflaterOutputStream.deflate(DeflaterOutputStream.java:251)
+	at java.util.zip.DeflaterOutputStream.write(DeflaterOutputStream.java:211)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:126)
+	-  locked java.io.BufferedOutputStream@c38dcd
+	at java.io.DataOutputStream.write(DataOutputStream.java:107)
+	-  locked java.io.DataOutputStream@fc14cd
+	...
+
+
+"Server Watchdog" Id=26 RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:446)
+	at le.run(SourceFile:43)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+"Netty Server IO #1" Id=18 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@1fe87f6
+	-  locked java.util.Collections$UnmodifiableSet@44fc23
+	-  locked sun.nio.ch.EPollSelectorImpl@1ba983
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"Netty Server IO #0" Id=17 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@4b8cf1
+	-  locked java.util.Collections$UnmodifiableSet@1d178b9
+	-  locked sun.nio.ch.EPollSelectorImpl@bf3084
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"DestroyJavaVM" Id=14 RUNNABLE
+
+
+"Server thread" Id=11 RUNNABLE
+	at java.lang.System.identityHashCode(Native Method)
+	at java.util.IdentityHashMap.hash(IdentityHashMap.java:294)
+	at java.util.IdentityHashMap.get(IdentityHashMap.java:328)
+	at cw.a(SourceFile:40)
+	at aso.a(SourceFile:108)
+	at atj.a(SourceFile:221)
+	at atj.a(SourceFile:104)
+	at lr.c(SourceFile:147)
+	...
+
+
+"Server Infinisleeper" Id=10 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at ld$1.run(SourceFile:79)
+
+
+"Snooper Timer" Id=9 TIMED_WAITING on java.util.TaskQueue@12bc621
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@12bc621
+	at java.util.TimerThread.mainLoop(Timer.java:552)
+	at java.util.TimerThread.run(Timer.java:505)
+
+
+"Signal Dispatcher" Id=4 RUNNABLE
+
+
+"Finalizer" Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@14fe631
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@14fe631
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+
+"Reference Handler" Id=2 WAITING on java.lang.ref.Reference$Lock@19f43d1
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.Reference$Lock@19f43d1
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:157)
+
+
+
+Stacktrace:
+	at le.run(SourceFile:59)
+	at java.lang.Thread.run(Thread.java:745)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.10.2
+	Operating System: Linux (arm) version 4.4.13-v7+
+	Java Version: 1.8.0_65, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) Client VM (mixed mode), Oracle Corporation
+	Memory: 128921264 bytes (122 MB) / 340774912 bytes (324 MB) up to 519045120 bytes (495 MB)
+	JVM Flags: 2 total; -Xms256M -Xmx512M
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 20; [lu['TOS'/337, l='world', x=-554.34, y=85.74, z=268.53]]
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)

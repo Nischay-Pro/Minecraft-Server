@@ -1,0 +1,178 @@
+---- Minecraft Crash Report ----
+// Why is it breaking :(
+
+Time: 30/07/16 13:24
+Description: Watching Server
+
+java.lang.Error
+	at lr.a(SourceFile:68)
+	at lr.b(SourceFile:78)
+	at lr.c(SourceFile:95)
+	at aid.a(SourceFile:299)
+	at aid.f(SourceFile:295)
+	at aid.o(SourceFile:679)
+	at rw.a(SourceFile:997)
+	at sf.U(SourceFile:244)
+	at sg.U(SourceFile:210)
+	at rw.m(SourceFile:345)
+	at sf.m(SourceFile:1593)
+	at sg.m(SourceFile:277)
+	at aid.a(SourceFile:1527)
+	at ls.a(SourceFile:718)
+	at aid.g(SourceFile:1505)
+	at aid.k(SourceFile:1388)
+	at ls.k(SourceFile:551)
+	at net.minecraft.server.MinecraftServer.D(SourceFile:626)
+	at ld.D(SourceFile:338)
+	at net.minecraft.server.MinecraftServer.C(SourceFile:554)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:458)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server Watchdog
+Stacktrace:
+	at lr.a(SourceFile:68)
+	at lr.b(SourceFile:78)
+	at lr.c(SourceFile:95)
+	at aid.a(SourceFile:299)
+	at aid.f(SourceFile:295)
+	at aid.o(SourceFile:679)
+	at rw.a(SourceFile:997)
+	at sf.U(SourceFile:244)
+	at sg.U(SourceFile:210)
+	at rw.m(SourceFile:345)
+	at sf.m(SourceFile:1593)
+	at sg.m(SourceFile:277)
+	at aid.a(SourceFile:1527)
+	at ls.a(SourceFile:718)
+	at aid.g(SourceFile:1505)
+	at aid.k(SourceFile:1388)
+	at ls.k(SourceFile:551)
+	at net.minecraft.server.MinecraftServer.D(SourceFile:626)
+	at ld.D(SourceFile:338)
+	at net.minecraft.server.MinecraftServer.C(SourceFile:554)
+
+-- Thread Dump --
+Details:
+	Threads: "File IO Thread" Id=27 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at bbu.c(SourceFile:51)
+	at bbu.run(SourceFile:30)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+"Netty Server IO #1" Id=18 RUNNABLE
+	at es.a(SourceFile:27)
+	at es.encode(SourceFile:15)
+	at io.netty.handler.codec.MessageToByteEncoder.write(MessageToByteEncoder.java:107)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite(AbstractChannelHandlerContext.java:658)
+	at io.netty.channel.AbstractChannelHandlerContext.write(AbstractChannelHandlerContext.java:716)
+	at io.netty.channel.AbstractChannelHandlerContext.writeAndFlush(AbstractChannelHandlerContext.java:706)
+	at io.netty.channel.AbstractChannelHandlerContext.writeAndFlush(AbstractChannelHandlerContext.java:741)
+	at io.netty.channel.DefaultChannelPipeline.writeAndFlush(DefaultChannelPipeline.java:895)
+	...
+
+
+"Server Watchdog" Id=26 RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:446)
+	at le.run(SourceFile:43)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+"Netty Server IO #0" Id=17 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@c3e94c
+	-  locked java.util.Collections$UnmodifiableSet@41224
+	-  locked sun.nio.ch.EPollSelectorImpl@3b823c
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"Server console handler" Id=13 RUNNABLE (in native)
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	-  locked java.io.BufferedInputStream@139181f
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	-  locked java.io.InputStreamReader@87043d
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	...
+
+
+"DestroyJavaVM" Id=14 RUNNABLE
+
+
+"Server thread" Id=11 RUNNABLE
+	at lr.a(SourceFile:68)
+	at lr.b(SourceFile:78)
+	at lr.c(SourceFile:95)
+	at aid.a(SourceFile:299)
+	at aid.f(SourceFile:295)
+	at aid.o(SourceFile:679)
+	at rw.a(SourceFile:997)
+	at sf.U(SourceFile:244)
+	...
+
+
+"Server Infinisleeper" Id=10 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at ld$1.run(SourceFile:79)
+
+
+"Snooper Timer" Id=9 TIMED_WAITING on java.util.TaskQueue@94b93b
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@94b93b
+	at java.util.TimerThread.mainLoop(Timer.java:552)
+	at java.util.TimerThread.run(Timer.java:505)
+
+
+"Signal Dispatcher" Id=4 RUNNABLE
+
+
+"Finalizer" Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@c0fbb7
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@c0fbb7
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+
+"Reference Handler" Id=2 WAITING on java.lang.ref.Reference$Lock@116e750
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.Reference$Lock@116e750
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:157)
+
+
+
+Stacktrace:
+	at le.run(SourceFile:59)
+	at java.lang.Thread.run(Thread.java:745)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.10.2
+	Operating System: Linux (arm) version 4.4.13-v7+
+	Java Version: 1.8.0_65, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) Client VM (mixed mode), Oracle Corporation
+	Memory: 259782232 bytes (247 MB) / 519045120 bytes (495 MB) up to 519045120 bytes (495 MB)
+	JVM Flags: 1 total; -Xms512m
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 20; [lu['NischayPro'/422, l='world', x=-675.27, y=75.00, z=563.73]]
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)

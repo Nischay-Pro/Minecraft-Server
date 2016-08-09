@@ -1,0 +1,181 @@
+---- Minecraft Crash Report ----
+// You're mean.
+
+Time: 02/08/16 06:36
+Description: Watching Server
+
+java.lang.Error
+	at asw.e(SourceFile:91)
+	at atj.a(SourceFile:312)
+	at atj.a(SourceFile:85)
+	at atj.a(SourceFile:72)
+	at lr.e(SourceFile:124)
+	at lr.b(SourceFile:81)
+	at lr.c(SourceFile:95)
+	at aid.a(SourceFile:299)
+	at aid.f(SourceFile:295)
+	at aid.o(SourceFile:679)
+	at ail.b(SourceFile:96)
+	at ail.a(SourceFile:60)
+	at mp.a(SourceFile:582)
+	at mp.a(SourceFile:516)
+	at lu.c(SourceFile:495)
+	at rw.U(SourceFile:386)
+	at sf.U(SourceFile:219)
+	at rw.m(SourceFile:345)
+	at sf.m(SourceFile:1593)
+	at zs.m(SourceFile:272)
+	at lu.k_(SourceFile:281)
+	at me.E_(SourceFile:178)
+	at eo.a(SourceFile:232)
+	at md.c(SourceFile:187)
+	at net.minecraft.server.MinecraftServer.D(SourceFile:644)
+	at ld.D(SourceFile:338)
+	at net.minecraft.server.MinecraftServer.C(SourceFile:554)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:458)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server Watchdog
+Stacktrace:
+	at asw.e(SourceFile:91)
+	at atj.a(SourceFile:312)
+	at atj.a(SourceFile:85)
+	at atj.a(SourceFile:72)
+	at lr.e(SourceFile:124)
+	at lr.b(SourceFile:81)
+	at lr.c(SourceFile:95)
+	at aid.a(SourceFile:299)
+	at aid.f(SourceFile:295)
+	at aid.o(SourceFile:679)
+	at ail.b(SourceFile:96)
+	at ail.a(SourceFile:60)
+	at mp.a(SourceFile:582)
+	at mp.a(SourceFile:516)
+	at lu.c(SourceFile:495)
+	at rw.U(SourceFile:386)
+	at sf.U(SourceFile:219)
+	at rw.m(SourceFile:345)
+	at sf.m(SourceFile:1593)
+	at zs.m(SourceFile:272)
+	at lu.k_(SourceFile:281)
+	at me.E_(SourceFile:178)
+	at eo.a(SourceFile:232)
+	at md.c(SourceFile:187)
+	at net.minecraft.server.MinecraftServer.D(SourceFile:644)
+	at ld.D(SourceFile:338)
+	at net.minecraft.server.MinecraftServer.C(SourceFile:554)
+
+-- Thread Dump --
+Details:
+	Threads: "Netty Server IO #1" Id=17 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@427ae
+	-  locked java.util.Collections$UnmodifiableSet@c3d95e
+	-  locked sun.nio.ch.EPollSelectorImpl@fc4cde
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"File IO Thread" Id=26 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at bbu.c(SourceFile:51)
+	at bbu.run(SourceFile:30)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+"Server Watchdog" Id=25 RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:446)
+	at le.run(SourceFile:43)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+"Netty Server IO #0" Id=16 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@1fed365
+	-  locked java.util.Collections$UnmodifiableSet@e2a4e3
+	-  locked sun.nio.ch.EPollSelectorImpl@7f9948
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:622)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:310)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"DestroyJavaVM" Id=14 RUNNABLE
+
+
+"Server thread" Id=11 RUNNABLE
+	at asw.e(SourceFile:91)
+	at atj.a(SourceFile:312)
+	at atj.a(SourceFile:85)
+	at atj.a(SourceFile:72)
+	at lr.e(SourceFile:124)
+	at lr.b(SourceFile:81)
+	at lr.c(SourceFile:95)
+	at aid.a(SourceFile:299)
+	...
+
+
+"Server Infinisleeper" Id=10 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at ld$1.run(SourceFile:79)
+
+
+"Snooper Timer" Id=9 TIMED_WAITING on java.util.TaskQueue@1d12c2a
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@1d12c2a
+	at java.util.TimerThread.mainLoop(Timer.java:552)
+	at java.util.TimerThread.run(Timer.java:505)
+
+
+"Signal Dispatcher" Id=4 RUNNABLE
+
+
+"Finalizer" Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@ef500f
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@ef500f
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+
+"Reference Handler" Id=2 WAITING on java.lang.ref.Reference$Lock@dc2683
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.Reference$Lock@dc2683
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:157)
+
+
+
+Stacktrace:
+	at le.run(SourceFile:59)
+	at java.lang.Thread.run(Thread.java:745)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.10.2
+	Operating System: Linux (arm) version 4.4.13-v7+
+	Java Version: 1.8.0_65, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) Client VM (mixed mode), Oracle Corporation
+	Memory: 49908480 bytes (47 MB) / 342278144 bytes (326 MB) up to 519045120 bytes (495 MB)
+	JVM Flags: 2 total; -Xms256M -Xmx512M
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 20; [lu['TOS'/349, l='world', x=-83.00, y=64.00, z=73.00]]
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)
