@@ -1,0 +1,26 @@
+[
+  {
+    "uuid": "e937a027-146e-3adb-b052-eb53c6b2730d",
+    "name": "Deathstroke7",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "a53ba497-cf35-3656-8921-a596dd09751a",
+    "name": "Smoothie",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "f71a8023-7968-3494-b125-c29418c14323",
+    "name": "TOS",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "0c35c373-d831-3225-8f00-120761ddc77a",
+    "name": "NischayPro",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  }
+]
