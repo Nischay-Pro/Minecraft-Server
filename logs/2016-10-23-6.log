@@ -1,0 +1,147 @@
+[15:01:55] [Server thread/INFO]: Starting minecraft server version 1.10.2
+[15:01:55] [Server thread/WARN]: To start the server with more ram, launch it as "java -Xmx1024M -Xms1024M -jar minecraft_server.jar"
+[15:01:55] [Server thread/INFO]: Loading properties
+[15:01:55] [Server console handler/ERROR]: Exception handling console input
+java.io.IOException: The handle is invalid
+	at java.io.FileInputStream.readBytes(Native Method) ~[?:1.8.0_91]
+	at java.io.FileInputStream.read(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedInputStream.read1(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedInputStream.read(Unknown Source) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamDecoder.read(Unknown Source) ~[?:1.8.0_91]
+	at java.io.InputStreamReader.read(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedReader.fill(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedReader.readLine(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedReader.readLine(Unknown Source) ~[?:1.8.0_91]
+	at ld$2.run(SourceFile:95) [minecraft_server.1.10.2.jar:?]
+[15:01:55] [Server thread/INFO]: Default game type: SURVIVAL
+[15:01:55] [Server thread/INFO]: Generating keypair
+[15:01:56] [Server thread/INFO]: Starting Minecraft server on *:25565
+[15:01:56] [Server thread/INFO]: Using default channel type
+[15:01:56] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[15:01:56] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[15:01:56] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[15:01:56] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[15:01:56] [Server thread/INFO]: Preparing level "world"
+[15:01:57] [Server thread/INFO]: Preparing start region for level 0
+[15:02:01] [Server thread/INFO]: Preparing spawn area: 0%
+[15:02:02] [Server thread/INFO]: Preparing spawn area: 17%
+[15:02:03] [Server thread/INFO]: Preparing spawn area: 26%
+[15:02:04] [Server thread/INFO]: Preparing spawn area: 29%
+[15:02:05] [Server thread/INFO]: Preparing spawn area: 37%
+[15:02:06] [Server thread/INFO]: Preparing spawn area: 39%
+[15:02:08] [Server thread/INFO]: Preparing spawn area: 40%
+[15:02:09] [Server thread/INFO]: Preparing spawn area: 47%
+[15:02:10] [Server thread/INFO]: Preparing spawn area: 56%
+[15:02:11] [Server thread/INFO]: Preparing spawn area: 64%
+[15:02:12] [Server thread/INFO]: Preparing spawn area: 68%
+[15:02:13] [Server thread/INFO]: Preparing spawn area: 70%
+[15:02:14] [Server thread/WARN]: Keeping entity Chicken that already exists with UUID 2cc91121-6e48-462b-9d99-b2607f348f19
+[15:02:15] [Server thread/INFO]: Preparing spawn area: 79%
+[15:02:15] [Server thread/WARN]: Keeping entity Chicken that already exists with UUID 17a1a90f-afa0-47af-a5d8-05c4020bfb06
+[15:02:16] [Server thread/INFO]: Preparing spawn area: 82%
+[15:02:17] [Server thread/INFO]: Preparing spawn area: 84%
+[15:02:17] [Server thread/WARN]: Keeping entity Pig that already exists with UUID 4a339d57-2b76-4fde-9c25-be7d48459c50
+[15:02:18] [Server thread/INFO]: Preparing spawn area: 93%
+[15:02:19] [Server thread/INFO]: Preparing spawn area: 94%
+[15:02:20] [Server thread/INFO]: Preparing spawn area: 98%
+[15:02:20] [Server thread/INFO]: Done (23.837s)! For help, type "help" or "?"
+[15:02:21] [Server thread/INFO]: Bee[/172.16.115.145:62052] logged in with entity id 410 at (-652.7914975860775, 82.0, 557.188061140609)
+[15:02:21] [Server thread/INFO]: Bee joined the game
+[15:02:23] [Server thread/WARN]: Keeping entity Zombie that already exists with UUID 962bed5c-92a3-4190-bf5d-d49633d9b6d8
+[15:02:23] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2817ms behind, skipping 56 tick(s)
+[15:02:39] [Server thread/INFO]: TOS[/172.16.115.145:62053] logged in with entity id 434 at (-625.8865358812865, 65.0, 569.4389110314535)
+[15:02:39] [Server thread/INFO]: TOS joined the game
+[15:02:48] [Server thread/INFO]: Opped Bee
+[15:02:58] [Server thread/INFO]: [Bee: Set own game mode to Creative Mode]
+[15:03:08] [Server thread/INFO]: [Bee: Teleported Bee to -799.5, 75.0, 700.5]
+[15:03:17] [Server thread/WARN]: Bee moved too quickly! 10.131952695822747,1.362411978951073,-0.09049650630913675
+[15:03:19] [Server thread/WARN]: Bee moved too quickly! 10.132544946728785,0.0,-2.0869897743225465
+[15:03:24] [Server thread/WARN]: Bee moved too quickly! -3.8509606881186755,0.0,9.432292817352732
+[15:03:30] [Server thread/WARN]: Bee moved too quickly! -2.0769282900579356,0.0,10.052114198293111
+[15:03:32] [Server thread/WARN]: Bee moved too quickly! -1.392781564569077,0.0,9.945889333688342
+[15:03:33] [Server thread/WARN]: Bee moved too quickly! -2.0425219167030946,0.0,10.34109802276339
+[15:03:35] [Server thread/WARN]: Bee moved too quickly! -2.7748937579639232,0.0,10.236869736155882
+[15:03:41] [Server thread/WARN]: Bee moved too quickly! -10.263692344834567,0.0,0.8389045176428453
+[15:03:58] [Server thread/WARN]: Bee moved too quickly! 1.2494700238522682,0.0,10.083594469632203
+[15:04:01] [Server thread/WARN]: Bee moved too quickly! 0.7873350239719912,0.0,10.632736182966255
+[15:04:03] [Server thread/WARN]: Bee moved too quickly! 0.6463247966952395,0.0,10.3261185422283
+[15:04:05] [Server Watchdog/FATAL]: A single server tick took 60.02 seconds (should be max 0.05)
+[15:04:05] [Server Watchdog/FATAL]: Considering it to be crashed, server will forcibly shutdown.
+[15:04:07] [Server thread/WARN]: Bee moved too quickly! 0.06428061914630234,0.0,10.021211590810708
+[15:04:07] [Server Watchdog/ERROR]: This crash report has been saved to: C:\Users\Tardis\Desktop\mc o13 zip\Minecraft-Server\.\crash-reports\crash-2016-10-23_15.04.06-server.txt
+[15:04:07] [Server Shutdown Thread/INFO]: Stopping server
+[15:04:30] [Server console handler/ERROR]: Exception handling console input
+java.io.IOException: The handle is invalid
+	at java.io.FileInputStream.readBytes(Native Method) ~[?:1.8.0_91]
+	at java.io.FileInputStream.read(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedInputStream.read1(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedInputStream.read(Unknown Source) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamDecoder.read(Unknown Source) ~[?:1.8.0_91]
+	at java.io.InputStreamReader.read(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedReader.fill(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedReader.readLine(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedReader.readLine(Unknown Source) ~[?:1.8.0_91]
+	at ld$2.run(SourceFile:95) [minecraft_server.1.10.2.jar:?]
+[15:04:30] [Server thread/INFO]: Starting minecraft server version 1.10.2
+[15:04:30] [Server thread/WARN]: To start the server with more ram, launch it as "java -Xmx1024M -Xms1024M -jar minecraft_server.jar"
+[15:04:30] [Server thread/INFO]: Loading properties
+[15:04:30] [Server thread/INFO]: Default game type: SURVIVAL
+[15:04:30] [Server thread/INFO]: Generating keypair
+[15:04:31] [Server thread/INFO]: Starting Minecraft server on *:25565
+[15:04:31] [Server thread/INFO]: Using default channel type
+[15:04:31] [Server thread/WARN]: **** FAILED TO BIND TO PORT!
+[15:04:31] [Server thread/WARN]: The exception was: java.net.BindException: Address already in use: bind
+[15:04:31] [Server thread/WARN]: Perhaps a server is already running on that port?
+[15:04:31] [Server thread/INFO]: Stopping server
+[15:04:31] [Server Shutdown Thread/INFO]: Stopping server
+known Source) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamDecoder.read(Unknown Source) ~[?:1.8.0_91]
+	at java.io.InputStreamReader.read(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedReader.fill(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedReader.readLine(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedReader.readLine(Unknown Source) ~[?:1.8.0_91]
+	at ld$2.run(SourceFile:95) [minecraft_server.1.10.2.jar:?]
+[15:04:30] [Server thread/INFO]: Starting minecraft server version 1.10.2
+[15:04:30] [Server thread/WARN]: To start the server with more ram, launch it as "java -Xmx1024M -Xms1024M -jar minecraft_server.jar"
+[15:04:30] [Server thread/INFO]: Loading properties
+[15:04:30] [Server thread/INFO]: Default game type: SURVIVAL
+[15:04:30] [Server thread/INFO]: Generating keypair
+[15:04:31] [Server thread/INFO]: Starting Minecraft server on *:25565
+[15:04:31] [Server thread/INFO]: Using default channel type
+[15:04:31] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[15:04:31] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[15:04:31] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[15:04:31] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[15:04:31] [Server thread/INFO]: Preparing level "world"
+[15:04:31] [Server thread/INFO]: Preparing start region for level 0
+[15:04:36] [Server thread/INFO]: Preparing spawn area: 0%
+version 1.10.2
+[15:04:31] [Server console handler/ERROR]: Exception handling console input
+java.io.IOException: The handle is invalid
+	at java.io.FileInputStream.readBytes(Native Method) ~[?:1.8.0_91]
+	at java.io.FileInputStream.read(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedInputStream.read1(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedInputStream.read(Unknown Source) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamDecoder.read(Unknown Source) ~[?:1.8.0_91]
+	at java.io.InputStreamReader.read(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedReader.fill(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedReader.readLine(Unknown Source) ~[?:1.8.0_91]
+	at java.io.BufferedReader.readLine(Unknown Source) ~[?:1.8.0_91]
+	at ld$2.run(SourceFile:95) [minecraft_server.1.10.2.jar:?]
+[15:04:31] [Server thread/WARN]: To start the server with more ram, launch it as "java -Xmx1024M -Xms1024M -jar minecraft_server.jar"
+[15:04:31] [Server thread/INFO]: Loading properties
+[15:04:31] [Server thread/INFO]: Default game type: SURVIVAL
+[15:04:31] [Server thread/INFO]: Generating keypair
+[15:04:32] [Server thread/INFO]: Starting Minecraft server on *:25565
+[15:04:32] [Server thread/INFO]: Using default channel type
+[15:04:33] [Server thread/WARN]: **** FAILED TO BIND TO PORT!
+[15:04:33] [Server thread/WARN]: The exception was: java.net.BindException: Address already in use: bind
+[15:04:33] [Server thread/WARN]: Perhaps a server is already running on that port?
+[15:04:33] [Server thread/INFO]: Stopping server
+[15:04:33] [Server Shutdown Thread/INFO]: Stopping server
